@@ -1,0 +1,172 @@
+@charset "uft=8";
+
+.wrap{
+width: 1200px;
+margin: 0 auto;
+ /* 左右をautoにすることで自動的に中央ぞろえにしてくれる */
+height: 50%;
+}
+
+body{
+    margin:0;
+    padding:0;
+    text-align:left;
+    font-size: 20px;
+}
+header{
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    margin: 0;
+}
+/* ------------------------------------
+ 　　　　　　　　見出し
+----------------------------------- */
+.top__title{
+    /* margin: 10px 10px; */
+    padding: 10px 10px;
+    text-align: left;
+    background-color:#ffd400;
+    animation-name: color-animation;
+    animation-duration:5s;
+}
+
+@keyframes color-animation {
+    0% {
+    background-color : #66CC99;
+    }
+    50% {
+    background-color : #FFCC99;
+    }
+    100% {
+    background-color : #ffd400;
+    }
+   }
+
+/* ------------------------------------
+ 　　　　　　　　赤鬼
+----------------------------------- */
+.akaoni{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 300px;
+}
+
+.judgement{
+    text-align: center;
+    font-weight: bold;
+   
+}
+.judgement__desc{
+    font-weight: bold;
+    margin: 0;
+    cursor:pointer;
+}
+
+/* ------------------------------------
+ 玄さん・おーちゃん・こーちゃん 
+----------------------------------- */
+
+.img__hands{
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    height:auto;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    /* listタグによってできる点を消す↑ */
+    cursor:pointer;
+}
+
+.img__janken{
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    list-style: none;
+    /* listタグによってできる点を消す↑ */
+}
+
+.janken__type{
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    width: 250px;
+    
+    
+}
+
+.yurukyara__name{
+    position:absolute;
+    font-size:15px;
+    font-weight: bold;
+    height:30px;
+}
+
+
+
+/* ------------------------------------
+ 　　　　　　豊岡紹介写真
+----------------------------------- */
+.about__toyooka{
+    text-align: center;
+    font-size: 20px;
+}
+
+.img__toyooka{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+    /* listタグによってできる点を消す↑ */
+}
+.img__item{
+    margin: 0 10px 0;
+}
+
+.desc__title{
+    font-size: 15px;
+    }
+
+.img_and_desc{
+font-size: 7px;
+justify-content: center;
+text-align: center;
+align-content: space-between;
+}
+
+
+.desc__item{
+    background-color: #FFFFE0;
+    border:2px dashed #FFDAB9;
+    line-height: 2rem;
+    width: 300px;
+    height:auto;
+}
+
+footer{
+    background-color: #fff;
+    border-bottom:1px solid #ccc;
+    text-align: center;
+}
+p{
+    font-size:200%;
+    text-align: center;
+    border-bottom:1px solid #fff;
+    height:200px;
+}
+.img__toyooka {
+    position: relative;
+}
+ 
+.img__toyooka > li {
+    position: absolute;
+    list-style: none;
+    visibility: hidden;
+    animation: anime_slider_fade 12s 0s infinite;
+}

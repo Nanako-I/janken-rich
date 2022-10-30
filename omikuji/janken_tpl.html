@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <link rel="stylesheet" href="css/sample.css">
+    <title>じゃんけん</title>
+</head>
+
+<body>
+<div class="wrap">
+    <header>
+        <div><h1 class="top__title">ゆるキャラと赤鬼をたおそう！</h1>
+        </div>
+    </header>
+
+    <main>
+    <id class="akaoni">
+        <div>
+            <!-- <div class="pc__hands__type"> -->
+            <span id="pc_hands">
+                <img src="img/akaoni.png" width="250" height="auto" alt="" >
+                
+            </span>
+        </div>
+        <div id="judgement"><p class="judgement__desc">いざ勝負！</p></div>
+    </id>
+
+    <!--------------------------------------
+    玄さん・おーちゃん・こーちゃん 
+   ------------------------------------->
+     <!-- 手の写真 -->
+     <ul class="img__hands">
+        <li id="gu_btn"><img src="img/gu-.jpg" width="250" height="150"></li>
+        <li id="cho_btn"><img src="img/cho.jpg" width="250" height="150"></li>
+        <li id="par_btn"><img src="img/pa-.jpg" width="250" height="150"></li>
+        </div>
+    </ul>
+
+       <!-- 玄さん -->
+        <ul class="img__janken">
+
+            <div class="janken__type">
+            <li id="gensan">
+                <img src="img/gensan.jpg" width="250"height="300">
+            </li>
+            <div class="yurukyara__name"><p>玄さん</p></div>
+        </div>
+
+        <!-- おーちゃん -->
+        <div class="janken__type">
+            <li id="o-chan"><img src="img/o-chan.jpg"width="250" height="300"></li>
+            <div class="yurukyara__name"><p>おーちゃん</p></div>
+
+        </div>
+
+        <!-- こーちゃん -->
+        <div class="janken__type">
+            <li id="ko-chan"><img src="img/ko-chan.jpg"width="250" height="300"></li>
+            <div class="yurukyara__name"><p>こーちゃん</p></div>
+        </div>
+        </ul>
+
+      
+
+       
+        <div class="about__toyooka">
+            <h2>兵庫県豊岡市の見どころ</h2>
+          </div>
+
+       
+        <div class="img">
+            <ul class="img__toyooka">
+            <div class="img_and_desc">
+                <div class="img__item">
+                    <li><img src="img/kounotori.jpg" width="300" height="200" alt="こうのとりの画像"></li>
+                </div>
+                <div class="desc__item">
+                    <div class="desc__title"> 
+                    <h3>【こうのとり】</h3></div>
+                        <p>
+                        <br>豊岡市のシンボルでもある特別天然記念物のこうのとり。
+                        <br>豊岡市では川、田んぼでもこうのとりがよく見られます。
+                    </p>
+                    
+                </div>
+            </div>
+            <div class="img_and_desc">
+                <div class="img__item">
+                    <li><img src="img/genbudou.JPG" width="300" height="200" alt="玄武洞の画像"></li>
+                </div>
+                <div class="desc__item">
+                    <div class="desc__title"> <h3>【玄武洞】</h3></div>
+                        <p>
+                        <br>火山活動により山頂から流れ出したマグマが、冷えて固まる時に作り出したきれいな割れ目が連なった洞窟です。
+                        <br>六角形の玄武岩が積み上げられた美しい洞窟です。
+                    </p>
+                    
+                </div>
+            </div>
+            <div class="img_and_desc">
+              <div class="img__item"><li><img src="img/kinosaki.jpg" width="300" height="200"alt="城崎の画像"></li>
+              </div>
+              <div class="desc__item">
+                <div class="desc__title"> <h3>【城崎温泉】</h3></div>
+                    <p>
+                    <br>7つの外湯があります。温泉街も栄えているため、食べ歩き・足湯めぐり・お土産選びなども楽しめます。
+                    <br>町中に山頂まで昇れるロープウェイがあり、頂上からは城崎の街を一望できます。
+                </p>
+                
+            </div>
+            </div>
+            <div class="img_and_desc">
+              <div class="img__item"><li><img src="img/izushi.jpg" width="300" height="200"alt="出石そばの画像"></li>
+              </div>
+              <div class="desc__item">
+               <div class="desc__title"> <h3>【出石そば】</h3>
+               </div>
+                <p>
+                    <br>小皿に分けて盛られた独特なスタイルの出石（いずし）そばが有名です。
+                    <br>町中に山頂まで昇れるロープウェイがあり、頂上からは城崎の街を一望できます。
+                </p>
+                
+            </div>
+            </div>
+            </ul>
+
+    </main>
+
+    <footer></footer>
+    <script>
+        $("#judgement").on("click", function () {
+            // alert("ok")
+            $("#pc_hands").hide(1000);
+            $("#pc_hands").show(1000);
+        });
+
+        // じゃんけん部分
+        // 【グー選択バージョン】
+        $("#gu_btn").on("click", function () {
+            // 1.乱数（1～5）
+            var random = Math.floor(Math.random() * 3);
+            console.log(random, "ランダムな手");
+
+            // 2.if分岐処理
+            let view = "";
+            if (random === 0) {
+                view = '<img src="img/gu-.jpg" width="250" height="auto">';
+            } else if (random === 1) {
+                view = '<img src="img/cho.jpg" width="250" height="auto">';
+            } else if (random === 2) {
+                view = '<img src="img/pa-.jpg" width="250" height="auto">';
+            }
+
+            // 3.表示処理
+            setTimeout(()=> {          
+            $("#pc_hands").html(view);
+            if (random == 0) {
+                result = 'あいこです。もう1度！！';
+            } else if (random == 1) {
+                result = '勝ち！やった！';
+            } else if (random == 2) {
+                result = '負け！残念！';
+            }$("#judgement").html(result);},500);
+        
+        }); 
+     
+
+        // 【チョキ選択バージョン】
+        $("#cho_btn").on("click", function () {
+            // alert("ok");
+
+
+            // 1.乱数（1～5）
+            var random = Math.floor(Math.random() * 3);
+            console.log(random, "ランダムな手");
+
+            // 2.if分岐処理
+            let view = "";
+            if (random === 0) {
+                view = '<img src="img/gu-.jpg" width="250" height="auto">';
+            } else if (random === 1) {
+                view = '<img src="img/cho.jpg" width="250" height="auto">';
+            } else if (random === 2) {
+                view = '<img src="img/pa-.jpg" width="250" height="auto">';
+            }
+
+
+            // 3.表示処理
+            setTimeout(()=> {          
+            $("#pc_hands").html(view);
+            if (random == 0) {
+                result = '負け！残念！！';
+            } else if (random == 1) {
+                result = 'あいこです。もう一度！';
+            } else if (random == 2) {
+                result = '勝ち！やった！';
+            }$("#judgement").html(result);},500);
+        });
+
+
+
+        // 【パー選択バージョン】
+        $("#par_btn").on("click", function () {
+            // alert("ok");
+
+
+            // 1.乱数（1～5）
+            var random = Math.floor(Math.random() * 3);
+            console.log(random, "ランダムな手");
+
+            // 2.if分岐処理
+            let view = "";
+            if (random === 0) {
+        
+                view = '<img src="img/gu-.jpg" width="250" height="auto">';
+            } else if (random === 1) {
+                view = '<img src="img/cho.jpg" width="250" height="auto">';
+            } else if (random === 2) {
+                view = '<img src="img/pa-.jpg" width="250" height="auto">';
+            }
+
+
+           
+            // 3.表示処理
+            setTimeout(()=> {          
+            $("#pc_hands").html(view);
+            if (random == 0) {
+                result = '勝ち！やった！！';
+            } else if (random == 1) {
+                result = '負け！残念！';
+            } else if (random == 2) {
+                result = 'あいこです。もう一度！';
+            }$("#judgement").html(result);},500);
+        });
+
+        $(function () {
+
+                //画像にクリックしたら発動
+                $("#gensan").on("click", function() {
+// alert("ok");
+           $("#gensan").html(' <img src="img/real__genbudou.jpeg" width="250"height="300">');   
+                });
+            });
+
+    </script>
+    </div>
+</body>
+
+</html>
