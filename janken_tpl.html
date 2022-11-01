@@ -51,7 +51,9 @@
 
         <!-- おーちゃん -->
         <div class="janken__type">
-            <li id="o-chan"><img src="img/o-chan.jpg"width="250" height="300"></li>
+            <li id="o-chan">
+                <img src="img/o-chan.jpg"width="250" height="300">
+            </li>
             <div class="yurukyara__name"><p>おーちゃん</p></div>
 
         </div>
@@ -59,6 +61,8 @@
         <!-- こーちゃん -->
         <div class="janken__type">
             <li id="ko-chan"><img src="img/ko-chan.jpg"width="250" height="300"></li>
+            <audio src="mp4/kounotori__sound.mp4" id="sound">
+            </audio>
             <div class="yurukyara__name"><p>こーちゃん</p></div>
         </div>
         </ul>
@@ -133,8 +137,8 @@
     <script>
         $("#judgement").on("click", function () {
             // alert("ok")
-            $("#pc_hands").hide(1000);
-            $("#pc_hands").show(1000);
+            $("#pc_hands").fadeOut(1000);
+            $("#pc_hands").fadeIn(1000);
         });
 
         // じゃんけん部分
@@ -238,12 +242,32 @@
 
         $(function () {
 
-                //画像にクリックしたら発動
+                //画像クリックしたら発動
                 $("#gensan").on("click", function() {
 // alert("ok");
            $("#gensan").html(' <img src="img/real__genbudou.jpeg" width="250"height="300">');   
                 });
             });
+
+            //画像クリックしたら発動
+            $("#o-chan").on("click", function() {
+// alert("ok");
+           $("#o-chan").html(' <img src="img/real__o-chan.png" width="250"height="300">');   
+                });
+           
+                 //画像クリックしたら発動
+            $("#ko-chan").on("click", function() {
+// alert("ok");
+           $("#ko-chan").html(' <img src="img/real__kounotori.jpg" width="250"height="300">');   
+                });
+
+                $("#ko-chan").on("click", function() {
+// alert("ok");
+           $("#ko-chan").html(' <img src="img/real__kounotori.jpg" width="250"height="300">');
+        //    音声再生↓
+           $("#sound").get(0).play();   
+                });
+
 
     </script>
     </div>
