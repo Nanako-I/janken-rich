@@ -1,4 +1,5 @@
 
+
         $("#judgement").on("click", function () {
             // alert("ok")
             $("#pc_hands").fadeOut(1000);
@@ -29,12 +30,11 @@
                 result = 'あいこです。もう1度！！';
             } else if (random == 1) {
                 result = '勝ち！やった！';
+                    $("#you__win1").html("〇");
+                    // 勝ち数に〇を追加↑
             } else if (random == 2) {
                 result = '負け！残念！';
             }$("#judgement").html(result);},500);
-        
-        }); 
-     
 
         // 【チョキ選択バージョン】
         $("#cho_btn").on("click", function () {
@@ -64,10 +64,9 @@
             } else if (random == 1) {
                 result = 'あいこです。もう一度！';
             } else if (random == 2) {
-                result = '勝ち！やった！';
+                result = '勝ち！やった！'; 
+                $("#you__win2").html("〇");
             }$("#judgement").html(result);},500);
-        });
-
 
 
         // 【パー選択バージョン】
@@ -97,12 +96,15 @@
             $("#pc_hands").html(view);
             if (random == 0) {
                 result = '勝ち！やった！！';
+                $("#you__win3").html("〇");
             } else if (random == 1) {
                 result = '負け！残念！';
             } else if (random == 2) {
                 result = 'あいこです。もう一度！';
             }$("#judgement").html(result);},500);
         });
+
+        
 
         $(function () {
 
@@ -131,4 +133,6 @@
         //    音声再生↓
            $("#sound").get(0).play();   
                 });
+        });
 
+        });
