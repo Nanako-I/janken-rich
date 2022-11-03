@@ -67,7 +67,10 @@ header{
 /* ------------------------------------
  　　　　　　勝ち数の表 
 ----------------------------------- */
-
+.button{
+    font-size: 20px;
+    font-weight: bold;
+}
 
 
 
@@ -175,4 +178,28 @@ p{
     list-style: none;
     visibility: hidden;
     animation: anime_slider_fade 12s 0s infinite;
+}
+
+
+
+/* ------------------------------------
+ 　　　　　　ここ以降oniku.html
+----------------------------------- */
+.oniku__desc{
+    text-align: center;
+    color: #fff;
+}
+
+
+.img__gensan.oniku{
+    display: flex;
+    flex-direction: row;
+}
+
+.gensan__present{
+        text-align: center;
+}
+
+.img__oniku{
+    text-align: center;
 }

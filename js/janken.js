@@ -101,6 +101,8 @@
             if (random == 0) {
                 result = '勝ち！やった！！';
                 $("#you__win3").html("〇");
+               
+
             } else if (random == 1) {
                 result = '負け！残念！';
             } else if (random == 2) {
@@ -108,7 +110,11 @@
             }$("#judgement").html(result);},500);
         });
 
-    
+        // 〇を選択するとoniku.htmlに飛びたかったが、このコードで上手くいかなかった↓
+        // $("#you__win3").on("click", function() {location.href = 'oniku.html');
+
+
+
 
         $(function () {
 
