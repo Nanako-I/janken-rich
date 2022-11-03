@@ -35,6 +35,8 @@
             } else if (random == 2) {
                 result = '負け！残念！';
             }$("#judgement").html(result);},500);
+        });
+
 
         // 【チョキ選択バージョン】
         $("#cho_btn").on("click", function () {
@@ -65,10 +67,12 @@
                 result = 'あいこです。もう一度！';
             } else if (random == 2) {
                 result = '勝ち！やった！'; 
+
                 $("#you__win2").html("〇");
+                
             }$("#judgement").html(result);},500);
-
-
+        });
+       
         // 【パー選択バージョン】
         $("#par_btn").on("click", function () {
             // alert("ok");
@@ -104,7 +108,7 @@
             }$("#judgement").html(result);},500);
         });
 
-        
+    
 
         $(function () {
 
@@ -120,7 +124,7 @@
 // alert("ok");
            $("#o-chan").html(' <img src="img/real__o-chan.png" width="250"height="300">');   
                 });
-           
+            
                  //画像クリックしたら発動
             $("#ko-chan").on("click", function() {
 // alert("ok");
@@ -133,6 +137,4 @@
         //    音声再生↓
            $("#sound").get(0).play();   
                 });
-        });
-
-        });
+       
